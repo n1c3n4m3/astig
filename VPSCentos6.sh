@@ -340,7 +340,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname xD`Criz
+visible_hostname CriZ
 END
 sed -i $MYIP2 /etc/squid/squid.conf;
 service squid restart
@@ -348,7 +348,7 @@ chkconfig squid on
 
 # install stunnel
 yum install stunnel
-wget -O /etc/pki/tls/certs/stunnel.pem "https://raw.githubusercontent.com/n1c3n4m3/astig/master/stunnel.pem"
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/n1c3n4m3/astig/master/stunnel.pem"
 wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/n1c3n4m3/astig/master/stunnel.conf"
 mkdir /var/run/stunnel
 chown nobody:nobody /var/run/stunnel
